@@ -8,24 +8,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+            <li class="nav-item">
                     <a class="nav-link" href="study.php">
                         <i class="fa-solid fa-graduation-cap"></i> ESTUDIOS
                     </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-briefcase"></i> EXPERIENCIA LABORAL
+                <li class="nav-item">
+                    <a class="nav-link" href="job.php">
+                        <i class="fa-solid fa-graduation-cap"></i> EXPERIENCIA LABORAL
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">
-                        <i class="fa-solid fa-graduation-cap"></i>Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link">
@@ -38,9 +29,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">
-                        <i class="fa-solid fa-envelope"></i> CONTACTAME
-                    </a>
+                    <a class="nav-link" data-bs-toggle="modal" href="#modalContacto">
+                            <i class="fa-solid fa-envelope"></i> CONTACTAME                           
+                        </a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
@@ -50,3 +41,49 @@
         </div>
     </div>
 </nav>
+<!-- Modal -->
+<div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+            <div class="modal-header bg-dark text-white text-center" style="display: block;">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Formulario de contacto
+                    <a type="button" href="" data-bs-dismiss="modal" aria-label="Close" class="ms-5 link-danger">
+                        <i class="fa-solid fa-circle-xmark text-danger"></i>
+                    </a>
+                </h1>
+                
+            </div>
+            <div class="modal-body">
+                <form class="row g-3">
+                    <div class="col-md-6 ">
+                        <label for="nombres" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nombres">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos">
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="email" placeholder="correo electronico">
+                    </div>
+                    <div class="col-12">
+                        <label for="asunto" class="form-label">Asunto</label>
+                        <input type="text" class="form-control" id="asunto" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcion">
+                        </textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-success bg-opacity-50">
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal"><i class="fa-regular fa-circle-xmark" style="color: #000000;"></i></button>
+                <button type="button" class="btn btn-primary bg-danger"><i class="fa-solid fa-paper-plane"></i></button>
+                <button type="button" class="btn btn-primary" type="submit"><i class="fa-brands fa-facebook"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
